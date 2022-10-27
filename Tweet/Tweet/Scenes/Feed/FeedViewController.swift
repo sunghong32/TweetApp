@@ -16,8 +16,8 @@ final class FeedViewController: UIViewController {
         let float = Floaty(size: 50.0)
         float.sticky = true
         float.handleFirstItemDirectly = true
-        float.addItem(title: "") { _ in
-            print("Floaty!")
+        float.addItem(title: "") { [weak self] _ in
+            self?.presenter.didTapWriteButton()
         }
         float.buttonImage = Icon.write.image?.withTintColor(.white, renderingMode: .alwaysOriginal)
 
@@ -73,5 +73,13 @@ extension FeedViewController: FeedProtocol {
             tweetViewController,
             animated: true
         )
+    }
+
+    func moveToWriteViewController() {
+        let writeViewController = UINavigationController(rootViewController: WriteViewController())
+
+        writeViewController.modalPresentationStyle = .fullScreen
+
+        present(writeViewController, animated: true)
     }
 }

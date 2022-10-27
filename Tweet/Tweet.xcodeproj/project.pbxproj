@@ -12,6 +12,8 @@
 		4F2D437B9AA353EF5DC70471 /* Pods_TweetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43164BECB772BBFF051357A5 /* Pods_TweetTests.framework */; };
 		65413AE7290A48A600DB632A /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65413AE6290A48A600DB632A /* TweetViewController.swift */; };
 		65413AE9290A48B300DB632A /* TweetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65413AE8290A48B300DB632A /* TweetPresenter.swift */; };
+		65413AEE290A60B500DB632A /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65413AED290A60B500DB632A /* WriteViewController.swift */; };
+		65413AF0290A60C200DB632A /* WritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65413AEF290A60C200DB632A /* WritePresenter.swift */; };
 		659FF8662908139D00145319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659FF8652908139D00145319 /* AppDelegate.swift */; };
 		659FF8682908139D00145319 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659FF8672908139D00145319 /* SceneDelegate.swift */; };
 		659FF86A2908139D00145319 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659FF8692908139D00145319 /* TabBarViewController.swift */; };
@@ -53,6 +55,8 @@
 		43164BECB772BBFF051357A5 /* Pods_TweetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65413AE6290A48A600DB632A /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TweetViewController.swift; path = ../TweetViewController.swift; sourceTree = "<group>"; };
 		65413AE8290A48B300DB632A /* TweetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TweetPresenter.swift; path = ../TweetPresenter.swift; sourceTree = "<group>"; };
+		65413AED290A60B500DB632A /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		65413AEF290A60C200DB632A /* WritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritePresenter.swift; sourceTree = "<group>"; };
 		659FF8622908139D00145319 /* Tweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		659FF8652908139D00145319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		659FF8672908139D00145319 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,21 +141,30 @@
 		65413AEA290A48B700DB632A /* Tweet */ = {
 			isa = PBXGroup;
 			children = (
-				65413AE6290A48A600DB632A /* TweetViewController.swift */,
 				65413AE8290A48B300DB632A /* TweetPresenter.swift */,
+				65413AE6290A48A600DB632A /* TweetViewController.swift */,
 			);
 			path = Tweet;
+			sourceTree = "<group>";
+		};
+		65413AEC290A60A400DB632A /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				65413AEF290A60C200DB632A /* WritePresenter.swift */,
+				65413AED290A60B500DB632A /* WriteViewController.swift */,
+			);
+			path = Write;
 			sourceTree = "<group>";
 		};
 		659FF8592908139D00145319 = {
 			isa = PBXGroup;
 			children = (
 				659FF8642908139D00145319 /* Tweet */,
+				1BC03E79D5B7C52A2BE91F64 /* Frameworks */,
+				20373643BAD31B9A25C946EF /* Pods */,
+				659FF8632908139D00145319 /* Products */,
 				659FF87B2908139E00145319 /* TweetTests */,
 				659FF8852908139E00145319 /* TweetUITests */,
-				659FF8632908139D00145319 /* Products */,
-				20373643BAD31B9A25C946EF /* Pods */,
-				1BC03E79D5B7C52A2BE91F64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,13 +182,16 @@
 			isa = PBXGroup;
 			children = (
 				659FF89E2908B00000145319 /* Managers */,
+				659FF89F2908B01100145319 /* UserDefaultsManager.swift */,
 				659FF89829081E2300145319 /* Models */,
+				659FF89929081E3800145319 /* Tweet.swift */,
+				659FF89C29081E5C00145319 /* User.swift */,
 				659FF89B29081E4000145319 /* Scenes */,
 				659FF8652908139D00145319 /* AppDelegate.swift */,
 				659FF8672908139D00145319 /* SceneDelegate.swift */,
 				659FF86E2908139E00145319 /* Assets.xcassets */,
-				659FF8702908139E00145319 /* LaunchScreen.storyboard */,
 				659FF8732908139E00145319 /* Info.plist */,
+				659FF8702908139E00145319 /* LaunchScreen.storyboard */,
 			);
 			path = Tweet;
 			sourceTree = "<group>";
@@ -200,8 +216,6 @@
 		659FF89829081E2300145319 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				659FF89929081E3800145319 /* Tweet.swift */,
-				659FF89C29081E5C00145319 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,10 +223,11 @@
 		659FF89B29081E4000145319 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				659FF8A82908F72800145319 /* TabBar */,
 				659FF8A52908BE1100145319 /* Feed */,
 				659FF8AB2908FE9F00145319 /* Icon.swift */,
+				659FF8A82908F72800145319 /* TabBar */,
 				65413AEA290A48B700DB632A /* Tweet */,
+				65413AEC290A60A400DB632A /* Write */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -220,7 +235,6 @@
 		659FF89E2908B00000145319 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				659FF89F2908B01100145319 /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -228,9 +242,9 @@
 		659FF8A52908BE1100145319 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				659FF8A12908BDFC00145319 /* FeedViewController.swift */,
 				659FF8A32908BE0C00145319 /* FeedPresenter.swift */,
 				659FF8A92908FAC600145319 /* FeedTableViewCell.swift */,
+				659FF8A12908BDFC00145319 /* FeedViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -238,8 +252,8 @@
 		659FF8A82908F72800145319 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				659FF8692908139D00145319 /* TabBarViewController.swift */,
 				659FF8A62908F71700145319 /* TabBarItem.swift */,
+				659FF8692908139D00145319 /* TabBarViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -494,6 +508,8 @@
 				659FF8A72908F71700145319 /* TabBarItem.swift in Sources */,
 				65413AE9290A48B300DB632A /* TweetPresenter.swift in Sources */,
 				659FF8A02908B01100145319 /* UserDefaultsManager.swift in Sources */,
+				65413AEE290A60B500DB632A /* WriteViewController.swift in Sources */,
+				65413AF0290A60C200DB632A /* WritePresenter.swift in Sources */,
 				659FF8682908139D00145319 /* SceneDelegate.swift in Sources */,
 				659FF89D29081E5C00145319 /* User.swift in Sources */,
 				659FF89A29081E3800145319 /* Tweet.swift in Sources */,
