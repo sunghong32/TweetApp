@@ -66,4 +66,12 @@ extension FeedViewController: FeedProtocol {
     func reloadTableView() {
         tableView.reloadData()
     }
+
+    func moveToTweetViewController(with tweet: Tweet) {
+        let tweetViewController = TweetViewController(tweet: tweet)
+        navigationController?.pushViewController(
+            tweetViewController,
+            animated: true
+        )
+    }
 }
