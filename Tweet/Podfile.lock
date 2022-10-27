@@ -1,0 +1,16 @@
+PODS:
+  - Floaty (4.2.0)
+
+DEPENDENCIES:
+  - Floaty
+
+SPEC REPOS:
+  trunk:
+    - Floaty
+
+SPEC CHECKSUMS:
+  Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
+
+PODFILE CHECKSUM: 33faef70873a4480160883543164af521e61fadd
+
+COCOAPODS: 1.11.3
